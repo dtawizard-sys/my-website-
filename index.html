@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DTA Wizard — Digital Transformation Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<canvas id="particle-canvas"></canvas>
+<div class="toast" id="toast"><span style="color:#22c55e;font-size:16px;">✓</span> Message sent! We'll respond within 24 hours.</div>
+
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <div class="logo-mark">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6 11L13 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="8" r="6.5" stroke="white" stroke-width="1.2"/></svg>
+    </div>
+    DTA Wizard
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#leadgen">Lead Gen</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Start a project →</a>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#leadgen" onclick="closeMenu()">Lead Generation</a>
+  <a href="#work" onclick="closeMenu()">Work</a>
+  <a href="#pricing" onclick="closeMenu()">Pricing</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Full-service creative &amp; digital agency</div>
+    <h1>Where data meets<br><em>craft.</em><br>Results follow.</h1>
+    <p class="hero-sub">We are DTA Wizard — Digital Transformation Agency. We build powerful websites, drive marketing growth, generate qualified leads, and produce world-class video and audio for businesses that refuse to be ordinary.</p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Explore services →</a>
+      <a href="#work" class="btn-outline">See our work</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div>Scroll to explore</div>
+  <div class="hero-trust">
+    <div class="trust-avatars">
+      <div class="trust-avatar" style="background:linear-gradient(135deg,#1a5cff,#7c3aed);">B</div>
+      <div class="trust-avatar" style="background:linear-gradient(135deg,#1a6b31,#0d9488);">A</div>
+      <div class="trust-avatar" style="background:linear-gradient(135deg,#8b1a1a,#c2410c);">C</div>
+      <div class="trust-avatar" style="background:linear-gradient(135deg,#5a3a00,#b45309);">D</div>
+    </div>
+    <span class="trust-text">Trusted by 50+ businesses</span>
+  </div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <div class="ticker-item"><strong>Web Development</strong><span class="ticker-dot"></span>Digital Marketing<span class="ticker-dot"></span><strong>Lead Generation</strong><span class="ticker-dot"></span>Video Editing<span class="ticker-dot"></span>Audio Production<span class="ticker-dot"></span><strong>Brand Strategy</strong><span class="ticker-dot"></span>Content Creation<span class="ticker-dot"></span><strong>SEO &amp; Growth</strong><span class="ticker-dot"></span>Social Media<span class="ticker-dot"></span><strong>CRM Automation</strong><span class="ticker-dot"></span>Cold Outreach<span class="ticker-dot"></span></div>
+    <div class="ticker-item"><strong>Web Development</strong><span class="ticker-dot"></span>Digital Marketing<span class="ticker-dot"></span><strong>Lead Generation</strong><span class="ticker-dot"></span>Video Editing<span class="ticker-dot"></span>Audio Production<span class="ticker-dot"></span><strong>Brand Strategy</strong><span class="ticker-dot"></span>Content Creation<span class="ticker-dot"></span><strong>SEO &amp; Growth</strong><span class="ticker-dot"></span>Social Media<span class="ticker-dot"></span><strong>CRM Automation</strong><span class="ticker-dot"></span>Cold Outreach<span class="ticker-dot"></span></div>
+  </div>
+</div>
+
+<section class="section-wrap" id="about">
+  <div class="about-box fade-in">
+    <div class="about-grid">
+      <div>
+        <div class="section-tag">What DTA stands for</div>
+        <h2 class="display">Three words.<br><em>One vision.</em></h2>
+        <div style="margin-top:2rem;">
+          <div class="acronym-row"><div class="acronym-letter">D</div><div class="acronym-content"><h3>Data-Driven</h3><p>Every creative decision is anchored in analytics and research. We don't guess — we measure, iterate, and build what the data proves works.</p></div></div>
+          <div class="acronym-row"><div class="acronym-letter">T</div><div class="acronym-content"><h3>Transformation</h3><p>We don't patch — we overhaul. From brand presence to growth pipelines, we engineer meaningful, measurable transformation for every client.</p></div></div>
+          <div class="acronym-row"><div class="acronym-letter">A</div><div class="acronym-content"><h3>Architecture</h3><p>Sustainable growth is designed, not stumbled upon. We architect digital ecosystems built to scale with your ambition over the long term.</p></div></div>
+        </div>
+      </div>
+      <div>
+        <p>DTA Wizard isn't just an agency — it's a strategic partner for businesses ready to compete at the highest level. We combine rigorous analytical thinking with exceptional creative execution.</p>
+        <p>Whether you're a startup building your digital foundation or an established enterprise looking to dominate your market, we have the expertise and the obsession to make it happen.</p>
+        <div class="stat-grid">
+          <div class="flip-wrap stat-flip" data-flip-id="stat1">
+            <div class="flip-inner">
+              <div class="flip-front"><div class="stat-num">50+</div><div class="stat-label">Clients served globally</div></div>
+              <div class="flip-back"><p>From SaaS startups in London to enterprise brands in Dubai — our 50+ clients span 12 industries across 4 continents, each achieving measurable digital transformation.</p></div>
+            </div>
+            <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+            <span class="flip-hint">Hold to reveal ✦</span>
+          </div>
+          <div class="flip-wrap stat-flip" data-flip-id="stat2">
+            <div class="flip-inner">
+              <div class="flip-front"><div class="stat-num">3×</div><div class="stat-label">Average ROI delivered</div></div>
+              <div class="flip-back"><p>Our average client sees 3× return on their investment within 6 months — measured in revenue, leads, and audience growth, not vanity metrics.</p></div>
+            </div>
+            <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+            <span class="flip-hint">Hold to reveal ✦</span>
+          </div>
+          <div class="flip-wrap stat-flip" data-flip-id="stat3">
+            <div class="flip-inner">
+              <div class="flip-front"><div class="stat-num">98%</div><div class="stat-label">Client retention rate</div></div>
+              <div class="flip-back"><p>98% of our clients renew or expand their engagement. We earn trust through radical transparency, on-time delivery, and results that speak louder than promises.</p></div>
+            </div>
+            <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+            <span class="flip-hint">Hold to reveal ✦</span>
+          </div>
+          <div class="flip-wrap stat-flip" data-flip-id="stat4">
+            <div class="flip-inner">
+              <div class="flip-front"><div class="stat-num">72h</div><div class="stat-label">Avg. project kickoff</div></div>
+              <div class="flip-back"><p>Within 72 hours of signing, you'll have a dedicated team, a project workspace, and your first strategy session booked. We move fast so your competitors can't catch up.</p></div>
+            </div>
+            <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+            <span class="flip-hint">Hold to reveal ✦</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-wrap" id="services" style="padding-top:0;">
+  <div class="services-header fade-in">
+    <div><div class="section-tag">What we do</div><h2 class="display">Every service your<br>brand <em>needs.</em></h2></div>
+    <a href="#contact" class="btn-outline">Discuss your project →</a>
+  </div>
+  <div class="services-grid fade-in">
+
+    <div class="flip-wrap service-flip" data-flip-id="svc1">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="service-num">01</div>
+          <div class="service-icon-wrap"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <h3>Website Development</h3>
+          <p>High-performance, conversion-focused websites built to turn visitors into customers. Fully custom — no templates, no compromises.</p>
+          <div class="service-tags"><span class="tag">Custom Design</span><span class="tag">E-Commerce</span><span class="tag">Webflow / WordPress</span><span class="tag">Mobile-First</span></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>What's included</h4>
+          <ul>
+            <li>Custom UX/UI design from scratch — zero templates</li>
+            <li>Mobile-first, Core Web Vitals optimised build</li>
+            <li>CMS integration (Webflow, WordPress, Headless)</li>
+            <li>Full on-page SEO + schema markup</li>
+            <li>Speed optimisation, CDN setup &amp; hosting advice</li>
+            <li>Conversion rate optimisation built into every page</li>
+          </ul>
+          <div class="back-stat">220%<span>average organic traffic lift post-launch</span></div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s to reveal more ✦</span>
+    </div>
+
+    <div class="flip-wrap service-flip" data-flip-id="svc2">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="service-num">02</div>
+          <div class="service-icon-wrap"><svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Digital Marketing</h3>
+          <p>Strategic campaigns that grow your reach, engage your audience, and generate qualified business leads. Measurable, compounding growth.</p>
+          <div class="service-tags"><span class="tag">SEO / SEM</span><span class="tag">Social Media</span><span class="tag">Email Campaigns</span><span class="tag">Paid Ads</span></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>What's included</h4>
+          <ul>
+            <li>Full SEO audit + ongoing technical &amp; content SEO</li>
+            <li>Google &amp; Meta paid ad management</li>
+            <li>Social media content calendars &amp; community management</li>
+            <li>Email sequences: welcome, nurture, re-engagement</li>
+            <li>Monthly analytics reports with actionable insights</li>
+            <li>Competitor monitoring &amp; market positioning</li>
+          </ul>
+          <div class="back-stat">15k<span>followers gained in 90 days for Verdant Co.</span></div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s to reveal more ✦</span>
+    </div>
+
+    <div class="flip-wrap service-flip" data-flip-id="svc3">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="service-num">03</div>
+          <div class="service-icon-wrap"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+          <h3>Video Editing &amp; Production</h3>
+          <p>Cinematic, scroll-stopping video content for brands, ads, reels and corporate storytelling. Raw footage into compelling narratives.</p>
+          <div class="service-tags"><span class="tag">Brand Films</span><span class="tag">Reels &amp; Shorts</span><span class="tag">Ad Creative</span><span class="tag">Color Grading</span></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>What's included</h4>
+          <ul>
+            <li>Full-service edit: cut, colour, grade, and audio mix</li>
+            <li>Motion graphics &amp; animated title sequences</li>
+            <li>Short-form content optimised for Reels, TikTok &amp; Shorts</li>
+            <li>Corporate testimonials, event highlights &amp; docs</li>
+            <li>Ad creative: 15s, 30s &amp; 60s direct-response formats</li>
+            <li>Subtitling, captions, and multi-language versioning</li>
+          </ul>
+          <div class="back-stat">200k<span>organic views on Verdant brand film in 30 days</span></div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s to reveal more ✦</span>
+    </div>
+
+    <div class="flip-wrap service-flip" data-flip-id="svc4">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="service-num">04</div>
+          <div class="service-icon-wrap"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+          <h3>Audio Editing &amp; Production</h3>
+          <p>From podcast engineering to full music production and commercial audio mastering — studio-quality sound that elevates your brand's voice.</p>
+          <div class="service-tags"><span class="tag">Podcast Production</span><span class="tag">Music Mastering</span><span class="tag">Voice-Over</span><span class="tag">Sound Design</span></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>What's included</h4>
+          <ul>
+            <li>Podcast recording setup guidance + remote recording</li>
+            <li>Multi-track editing, noise removal &amp; EQ mastering</li>
+            <li>Music composition, arrangement &amp; full production</li>
+            <li>Commercial-grade audio for ads, explainers &amp; brand</li>
+            <li>Stem delivery for broadcast &amp; streaming platforms</li>
+            <li>Voice-over casting, direction &amp; final mix delivery</li>
+          </ul>
+          <div class="back-stat">2 weeks<span>raw idea to polished show for Aurelius Records</span></div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s to reveal more ✦</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="leadgen-section fade-in" id="leadgen">
+  <div class="leadgen-bg-grid"></div>
+  <div class="leadgen-orb leadgen-orb-1"></div>
+  <div class="leadgen-orb leadgen-orb-2"></div>
+  <div class="leadgen-inner">
+    <div class="leadgen-header">
+      <div>
+        <div class="section-tag">New service</div>
+        <h2 class="display">Fill your pipeline.<br><em>Accelerate</em> growth.</h2>
+        <p class="leadgen-sub" style="margin-top:1rem;">We don't just drive traffic — we engineer revenue-ready pipelines. From targeting to conversion, our lead generation service delivers prospects who are primed to buy.</p>
+      </div>
+      <a href="#contact" class="btn-glow">Get qualified leads →</a>
+    </div>
+    <div class="leadgen-grid">
+
+      <div class="flip-wrap lg-flip" data-flip-id="lg1">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="lg-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>ICP Targeting</h3>
+            <p>Hyper-precise Ideal Customer Profiles built from your data and market research to reach decision-makers with budget and intent.</p>
+            <div style="margin:1.5rem 0 1rem;"><div class="lg-stat">4.8×</div><div class="lg-stat-label">Higher conversion vs generic lists</div></div>
+            <div class="lg-tags"><span class="lg-tag">B2B &amp; B2C</span><span class="lg-tag">Buyer Personas</span><span class="lg-tag">Intent Data</span></div>
+          </div>
+          <div class="flip-back">
+            <span class="flip-close" onclick="unflip(this)">✕</span>
+            <h4>How we build your ICP</h4>
+            <p>We combine first-party data, CRM analysis, and third-party intent signals to build a targeting framework your competitors don't have.</p>
+            <ul class="back-steps">
+              <li>Analyse your best existing customers for patterns</li>
+              <li>Layer in firmographic &amp; technographic data</li>
+              <li>Map buying triggers and decision-maker roles</li>
+              <li>Build a segmented prospect database of 500–5,000 verified contacts</li>
+              <li>Continuously refine based on reply &amp; conversion data</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+        <span class="flip-hint">Hold 3s to reveal ✦</span>
+      </div>
+
+      <div class="flip-wrap lg-flip" data-flip-id="lg2">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="lg-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <h3>Cold Outreach Campaigns</h3>
+            <p>Multi-touch email and LinkedIn sequences crafted by conversion specialists. Every message is A/B tested and personalised at scale.</p>
+            <div style="margin:1.5rem 0 1rem;"><div class="lg-stat">38%</div><div class="lg-stat-label">Average open rate achieved</div></div>
+            <div class="lg-tags"><span class="lg-tag">Email Sequences</span><span class="lg-tag">LinkedIn DMs</span><span class="lg-tag">A/B Testing</span></div>
+          </div>
+          <div class="flip-back">
+            <span class="flip-close" onclick="unflip(this)">✕</span>
+            <h4>Our outreach framework</h4>
+            <p>Every campaign follows our proven 7-touch cadence that generates replies without burning your sender reputation.</p>
+            <ul class="back-steps">
+              <li>Domain warm-up &amp; deliverability audit before send</li>
+              <li>3-variant subject line A/B testing on every campaign</li>
+              <li>Personalised openers using prospect's own content</li>
+              <li>LinkedIn connection + message sequences in parallel</li>
+              <li>Automated follow-ups that feel hand-written</li>
+              <li>Real-time reply management and meeting booking</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+        <span class="flip-hint">Hold 3s to reveal ✦</span>
+      </div>
+
+      <div class="flip-wrap lg-flip" data-flip-id="lg3">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="lg-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h3>Funnel &amp; Landing Pages</h3>
+            <p>High-converting lead capture funnels — from magnetic lead magnets to CRO-optimised landing pages that turn visitors into verified prospects.</p>
+            <div style="margin:1.5rem 0 1rem;"><div class="lg-stat">3.2×</div><div class="lg-stat-label">Lift in landing page conversions</div></div>
+            <div class="lg-tags"><span class="lg-tag">CRO</span><span class="lg-tag">Lead Magnets</span><span class="lg-tag">A/B Split Tests</span></div>
+          </div>
+          <div class="flip-back">
+            <span class="flip-close" onclick="unflip(this)">✕</span>
+            <h4>Funnel architecture</h4>
+            <p>We design funnels that qualify visitors automatically — only sending you prospects who are genuinely interested.</p>
+            <ul class="back-steps">
+              <li>Awareness ads → lead magnet landing page</li>
+              <li>Gated content (guides, tools, calculators)</li>
+              <li>Thank-you page upsell &amp; calendar booking embed</li>
+              <li>Multi-step form with progressive profiling</li>
+              <li>Real-time CRM sync for instant follow-up</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+        <span class="flip-hint">Hold 3s to reveal ✦</span>
+      </div>
+
+      <div class="flip-wrap lg-flip" data-flip-id="lg4">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="lg-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+            <h3>Paid Ads for Lead Gen</h3>
+            <p>Performance-tuned Google, Meta, and LinkedIn ad campaigns built for cost-effective, qualified lead acquisition. We own your CAC.</p>
+            <div style="margin:1.5rem 0 1rem;"><div class="lg-stat">52%</div><div class="lg-stat-label">Average reduction in cost-per-lead</div></div>
+            <div class="lg-tags"><span class="lg-tag">Google Ads</span><span class="lg-tag">Meta Ads</span><span class="lg-tag">LinkedIn Ads</span></div>
+          </div>
+          <div class="flip-back">
+            <span class="flip-close" onclick="unflip(this)">✕</span>
+            <h4>Paid strategy process</h4>
+            <p>We treat every pound of ad spend as if it's our own money. Every campaign starts with an audit, not assumptions.</p>
+            <ul class="back-steps">
+              <li>Full account audit &amp; competitor ad spy</li>
+              <li>Audience segmentation by intent level</li>
+              <li>Creative testing: 5+ ad variants per campaign</li>
+              <li>Weekly bid optimisation and budget reallocation</li>
+              <li>Retargeting sequences to recover lost leads</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+        <span class="flip-hint">Hold 3s to reveal ✦</span>
+      </div>
+
+      <div class="flip-wrap lg-flip" data-flip-id="lg5">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="lg-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>CRM &amp; Nurture Automation</h3>
+            <p>Turn cold leads warm with intelligent email and SMS nurture sequences. A self-running lead machine that works 24/7.</p>
+            <div style="margin:1.5rem 0 1rem;"><div class="lg-stat">67%</div><div class="lg-stat-label">More leads converted to meetings</div></div>
+            <div class="lg-tags"><span class="lg-tag">HubSpot</span><span class="lg-tag">ActiveCampaign</span><span class="lg-tag">Automation</span></div>
+          </div>
+          <div class="flip-back">
+            <span class="flip-close" onclick="unflip(this)">✕</span>
+            <h4>Automation stack</h4>
+            <p>We build automated workflows that respond faster than any human could — moving leads through your pipeline without manual effort.</p>
+            <ul class="back-steps">
+              <li>CRM audit &amp; pipeline architecture design</li>
+              <li>Lead scoring model based on behaviour triggers</li>
+              <li>Automated email + SMS drip sequences (7–14 touch)</li>
+              <li>Slack/email alerts for hot leads reaching score threshold</li>
+              <li>Monthly automation health-check &amp; optimisation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+        <span class="flip-hint">Hold 3s to reveal ✦</span>
+      </div>
+
+      <div class="flip-wrap lg-flip" data-flip-id="lg6">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <div class="lg-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <h3>Reporting &amp; Revenue Intel</h3>
+            <p>Full-funnel dashboards with real-time visibility on pipeline value, MQL-to-SQL rates, and revenue attribution. No vanity metrics.</p>
+            <div style="margin:1.5rem 0 1rem;"><div class="lg-stat">100%</div><div class="lg-stat-label">Transparent ROI reporting</div></div>
+            <div class="lg-tags"><span class="lg-tag">Dashboards</span><span class="lg-tag">Attribution</span><span class="lg-tag">Revenue KPIs</span></div>
+          </div>
+          <div class="flip-back">
+            <span class="flip-close" onclick="unflip(this)">✕</span>
+            <h4>What you see every week</h4>
+            <p>No hiding behind impressions and clicks. We report on the metrics your CFO actually cares about.</p>
+            <ul class="back-steps">
+              <li>Leads generated vs target (MQL &amp; SQL split)</li>
+              <li>Cost-per-lead and cost-per-meeting-booked</li>
+              <li>Pipeline value added from DTA-sourced leads</li>
+              <li>Channel attribution: which source drives best leads</li>
+              <li>Weekly Loom walkthrough from your account manager</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+        <span class="flip-hint">Hold 3s to reveal ✦</span>
+      </div>
+
+    </div><div class="leadgen-cta-banner">
+      <div>
+        <h3>Ready to build a pipeline that never runs dry?</h3>
+        <p>Book a free Lead Gen Audit — we'll map your current gaps and show you exactly how many qualified leads you could be generating every month.</p>
+      </div>
+      <a href="#contact" class="btn-glow">Book free audit →</a>
+    </div>
+  </div>
+</section>
+
+<section class="process-section fade-in">
+  <div class="section-tag">How we work</div>
+  <h2 class="display">A process built for<br><em>results.</em></h2>
+  <div class="process-grid">
+
+    <div class="flip-wrap process-flip" data-flip-id="p1">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="step-bg-num">01</div>
+          <div class="step-dot">01</div>
+          <h3>Discovery</h3>
+          <p>We learn your business, goals, competitors, and audience inside out. No assumptions — deep research from day one.</p>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Discovery deliverables</h4>
+          <p>You receive a full Discovery Report covering your competitive landscape, audience insights, and opportunity map within 5 business days.</p>
+          <div class="deliverable">📋 Deliverable: 20-page Discovery Report + Competitor Matrix</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s ✦</span>
+    </div>
+
+    <div class="flip-wrap process-flip" data-flip-id="p2">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="step-bg-num">02</div>
+          <div class="step-dot">02</div>
+          <h3>Strategy</h3>
+          <p>A clear roadmap with deliverables, timeline, and KPIs. You approve it before a single pixel is placed.</p>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Strategy deliverables</h4>
+          <p>A shared project workspace is set up with your full strategic roadmap, timeline, budget breakdown, and KPI targets — all approved by you before we begin.</p>
+          <div class="deliverable">📋 Deliverable: Strategy Deck + Notion Project Workspace</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s ✦</span>
+    </div>
+
+    <div class="flip-wrap process-flip" data-flip-id="p3">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="step-bg-num">03</div>
+          <div class="step-dot">03</div>
+          <h3>Creation</h3>
+          <p>Our team executes with precision. You stay involved with progress updates and iterative reviews throughout.</p>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>During creation</h4>
+          <p>Weekly async video updates, a shared Figma/staging link for live review, and at least 2 structured revision rounds are built into every project.</p>
+          <div class="deliverable">📋 Ongoing: Weekly Loom updates + Staging Access</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s ✦</span>
+    </div>
+
+    <div class="flip-wrap process-flip" data-flip-id="p4">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="step-bg-num">04</div>
+          <div class="step-dot">04</div>
+          <h3>Launch &amp; Scale</h3>
+          <p>Go live with confidence. We support post-launch optimisation and scale what's working — growth doesn't stop at launch.</p>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Post-launch support</h4>
+          <p>30-day hyper-care support period included in every project. We monitor, fix, and optimise in real-time so your launch is bulletproof.</p>
+          <div class="deliverable">📋 Included: 30-day post-launch monitoring + Priority Support</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s ✦</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-wrap" id="work">
+  <div class="services-header fade-in">
+    <div><div class="section-tag">Selected work</div><h2 class="display">Projects we're<br><em>proud of.</em></h2></div>
+    <a href="#contact" class="btn-outline">Start your project →</a>
+  </div>
+  <div class="portfolio-grid fade-in">
+
+    <div class="flip-wrap portfolio-flip" data-flip-id="port1">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="portfolio-thumb p1"><span class="portfolio-thumb-label">Nexvora</span><div class="portfolio-tag">Web Dev</div></div>
+          <div class="portfolio-info"><h3>Nexvora Technologies</h3><p>Full website redesign + SEO — 220% increase in organic traffic</p></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Nexvora Technologies</h4>
+          <span class="result-pill">220% organic traffic in 4 months</span>
+          <p>Nexvora came to us with an outdated site converting at 0.8%. We redesigned their entire digital presence — architecture, copy, UX, and technical SEO — bringing conversion to 3.4% and tripling inbound leads.</p>
+          <div class="services-used"><span>Custom Web Design</span><span>Technical SEO</span><span>CRO</span><span>Content Strategy</span></div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint" style="color:rgba(255,255,255,0.6);">Hold 3s for case study ✦</span>
+    </div>
+
+    <div class="flip-wrap portfolio-flip" data-flip-id="port2">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="portfolio-thumb p2"><span class="portfolio-thumb-label">Verdant</span><div class="portfolio-tag">Marketing</div></div>
+          <div class="portfolio-info"><h3>Verdant Co.</h3><p>Brand launch campaign — 15k followers in 90 days from zero</p></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Verdant Co.</h4>
+          <span class="result-pill">15,000 followers · 200k video views</span>
+          <p>Zero to launch in 6 weeks. We built the brand identity, content strategy, social channels, and paid amplification from scratch. Their brand film hit 200k organic views in 30 days with zero ad spend.</p>
+          <div class="services-used"><span>Brand Strategy</span><span>Social Media</span><span>Video Production</span><span>Paid Ads</span></div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint" style="color:rgba(255,255,255,0.6);">Hold 3s for case study ✦</span>
+    </div>
+
+    <div class="flip-wrap portfolio-flip" data-flip-id="port3">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="portfolio-thumb p3"><span class="portfolio-thumb-label">Aurelius</span><div class="portfolio-tag">Video + Audio</div></div>
+          <div class="portfolio-info"><h3>Aurelius Records</h3><p>Full audio production &amp; music video editing for EP release</p></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Aurelius Records</h4>
+          <span class="result-pill">EP released in 2 weeks · 50k streams</span>
+          <p>From raw sessions to a fully mastered 5-track EP with music video in 14 days. We handled mixing, mastering, music video editing, and distribution setup — the fastest EP turnaround in our history.</p>
+          <div class="services-used"><span>Audio Mastering</span><span>Music Video Edit</span><span>Distribution</span><span>Podcast Setup</span></div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint" style="color:rgba(255,255,255,0.6);">Hold 3s for case study ✦</span>
+    </div>
+
+    <div class="flip-wrap portfolio-flip" data-flip-id="port4">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="portfolio-thumb p4"><span class="portfolio-thumb-label">Axion</span><div class="portfolio-tag">Lead Gen</div></div>
+          <div class="portfolio-info"><h3>Axion SaaS</h3><p>B2B lead gen campaign — 340 qualified SQLs in 60 days</p></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Axion SaaS</h4>
+          <span class="result-pill">340 SQLs · 6× ROI in 3 months</span>
+          <p>Axion needed a consistent pipeline to fuel their Series A fundraise story. We ran a 3-channel outbound + inbound campaign — cold email, LinkedIn, and landing pages — generating 340 sales-qualified leads in 60 days at £18 CPL.</p>
+          <div class="services-used"><span>Cold Outreach</span><span>LinkedIn Ads</span><span>Funnel Design</span><span>CRM Automation</span></div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint" style="color:rgba(255,255,255,0.6);">Hold 3s for case study ✦</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="testi-section fade-in">
+  <div class="section-tag">Client stories</div>
+  <h2 class="display">Don't take our word<br>for <em>it.</em></h2>
+  <div class="testi-grid">
+
+    <div class="flip-wrap testi-flip" data-flip-id="t1">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="quote-mark">"</span>
+          <div class="stars">★★★★★</div>
+          <p>DTA Wizard rebuilt our entire digital presence from the ground up. Within 3 months, qualified inbound leads tripled. Their strategic depth is genuinely rare in an agency.</p>
+          <div class="testi-author"><div class="author-avatar">MK</div><div><div class="author-name">Marcus K.</div><div class="author-role">CEO, Nexvora Technologies</div></div></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Marcus K. — Nexvora</h4>
+          <p class="full-quote">"Working with DTA Wizard was the single best business decision we made in 2025. They didn't just redesign our site — they redesigned how we think about our digital presence entirely. Every decision was backed by data, every meeting was focused and productive, and the results exceeded every KPI we set. I've worked with 4 other agencies. None of them come close."</p>
+          <div class="result-badge"><strong>3×</strong>&nbsp;leads in 90 days</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s for full review ✦</span>
+    </div>
+
+    <div class="flip-wrap testi-flip" data-flip-id="t2">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="quote-mark">"</span>
+          <div class="stars">★★★★★</div>
+          <p>The video production quality blew us away — and the turnaround was faster than any agency we've worked with. Our brand film hit 200k organic views within a month.</p>
+          <div class="testi-author"><div class="author-avatar">SA</div><div><div class="author-name">Sara A.</div><div class="author-role">Head of Brand, Verdant Co.</div></div></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Sara A. — Verdant Co.</h4>
+          <p class="full-quote">"I've commissioned video from studios charging 4× what DTA Wizard charges. The quality here matched or exceeded every one of them — and they delivered in half the time. The brand film became our most shared piece of content ever. We've since handed them our entire video budget for the year."</p>
+          <div class="result-badge"><strong>200k</strong>&nbsp;organic views · 30 days</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s for full review ✦</span>
+    </div>
+
+    <div class="flip-wrap testi-flip" data-flip-id="t3">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <span class="quote-mark">"</span>
+          <div class="stars">★★★★★</div>
+          <p>Their lead gen team booked us 47 qualified sales calls in the first month alone. ROI was 6× by month three. Absolute game-changers for our pipeline strategy.</p>
+          <div class="testi-author"><div class="author-avatar">RB</div><div><div class="author-name">Rajan B.</div><div class="author-role">Founder, Axion SaaS</div></div></div>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Rajan B. — Axion SaaS</h4>
+          <p class="full-quote">"Before DTA Wizard, our pipeline was entirely dependent on word of mouth and one salesperson. They built us a predictable, scalable outbound machine. 47 booked calls in month one at £22 CAC. By month three, 6 of those had converted, delivering 6× ROI on the entire engagement. I recommend them to every SaaS founder I meet."</p>
+          <div class="result-badge"><strong>6×</strong>&nbsp;ROI · Month 3</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s for full review ✦</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-wrap" id="pricing">
+  <div class="section-tag fade-in">Transparent pricing</div>
+  <h2 class="display fade-in">Simple plans,<br>serious <em>results.</em></h2>
+  <div class="pricing-grid fade-in">
+
+    <div class="flip-wrap pricing-flip" data-flip-id="price1">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price">Custom<sub> / quote</sub></div>
+          <div class="pricing-desc">For small businesses and startups building their digital foundation right from the start.</div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span>5-page custom website</li>
+            <li><span class="check">✓</span>Mobile-responsive design</li>
+            <li><span class="check">✓</span>Basic SEO setup</li>
+            <li><span class="check">✓</span>Lead capture form</li>
+            <li><span class="check">✓</span>30-day post-launch support</li>
+          </ul>
+          <a href="#contact" class="btn-pricing">Get a quote →</a>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Starter — Who it's for</h4>
+          <span class="plan-tag">Starter plan details</span>
+          <div class="detail-item"><h5>Typical timeline</h5><p>2–4 weeks from kick-off to launch, depending on content readiness and feedback speed.</p></div>
+          <div class="detail-item"><h5>What you own</h5><p>You own everything — full source files, domain, hosting account, and CMS access. No lock-in.</p></div>
+          <div class="detail-item"><h5>Upgrade path</h5><p>When you're ready to grow, migrating to the Growth plan is seamless — no rebuild needed.</p></div>
+          <div class="ideal-for">💡 Ideal for: local businesses, early-stage startups, freelancers building credibility online.</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s for plan details ✦</span>
+    </div>
+
+    <div class="flip-wrap pricing-flip featured" data-flip-id="price2">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="pricing-badge">Most popular</div>
+          <div class="pricing-tier">Growth</div>
+          <div class="pricing-price">Custom<sub> / quote</sub></div>
+          <div class="pricing-desc">For growing businesses that need full-stack digital execution and measurable results.</div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span>Full custom website (10+ pages)</li>
+            <li><span class="check">✓</span>Lead generation campaigns</li>
+            <li><span class="check">✓</span>Marketing strategy &amp; execution</li>
+            <li><span class="check">✓</span>Monthly video content (4 pieces)</li>
+            <li><span class="check">✓</span>SEO + paid ads management</li>
+            <li><span class="check">✓</span>CRM &amp; nurture automation</li>
+            <li><span class="check">✓</span>Dedicated account manager</li>
+          </ul>
+          <a href="#contact" class="btn-pricing">Get a quote →</a>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Growth — Who it's for</h4>
+          <span class="plan-tag">Growth plan details</span>
+          <div class="detail-item"><h5>Typical timeline</h5><p>Onboarding in 72 hours. Website live in 4–6 weeks. Marketing campaigns running by week 3.</p></div>
+          <div class="detail-item"><h5>What's different</h5><p>Unlike the Starter plan, Growth is a retainer — meaning we're an ongoing extension of your team, not a one-off project.</p></div>
+          <div class="detail-item"><h5>Minimum commitment</h5><p>3-month minimum engagement, then rolling monthly. Most clients stay 18+ months.</p></div>
+          <div class="ideal-for">💡 Ideal for: funded startups, SMEs targeting £1M+ revenue, businesses ready to invest in consistent digital growth.</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s for plan details ✦</span>
+    </div>
+
+    <div class="flip-wrap pricing-flip" data-flip-id="price3">
+      <div class="flip-inner">
+        <div class="flip-front">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-price">Bespoke<sub> / retainer</sub></div>
+          <div class="pricing-desc">For organisations requiring a fully embedded creative and digital partner at scale.</div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span>Everything in Growth</li>
+            <li><span class="check">✓</span>Full audio production suite</li>
+            <li><span class="check">✓</span>Custom integrations &amp; CMS</li>
+            <li><span class="check">✓</span>Weekly strategy sessions</li>
+            <li><span class="check">✓</span>Priority 24/7 support</li>
+            <li><span class="check">✓</span>Quarterly brand audits</li>
+          </ul>
+          <a href="#contact" class="btn-pricing">Let's talk →</a>
+        </div>
+        <div class="flip-back">
+          <span class="flip-close" onclick="unflip(this)">✕</span>
+          <h4>Enterprise — Who it's for</h4>
+          <span class="plan-tag">Enterprise plan details</span>
+          <div class="detail-item"><h5>Dedicated team</h5><p>You get a named team: lead strategist, creative director, developer, and account manager — all focused on your account.</p></div>
+          <div class="detail-item"><h5>Custom integrations</h5><p>API connections, bespoke dashboards, and custom CMS builds are all in scope. We handle complex technical requirements other agencies can't.</p></div>
+          <div class="detail-item"><h5>SLA</h5><p>Priority response within 2 hours during business hours. Critical issues resolved same-day, guaranteed.</p></div>
+          <div class="ideal-for">💡 Ideal for: scale-ups, enterprise brands, PE-backed businesses, and organisations needing a full embedded digital partner.</div>
+        </div>
+      </div>
+      <div class="flip-timer-ring"><svg viewBox="0 0 36 36"><circle class="track" cx="18" cy="18" r="15"/><circle class="prog" cx="18" cy="18" r="15"/></svg></div>
+      <span class="flip-hint">Hold 3s for plan details ✦</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-section fade-in" id="contact">
+  <div class="section-tag">Get in touch</div>
+  <h2 class="display">Ready to build<br>something <em>great?</em></h2>
+  <div class="contact-grid">
+    <div>
+      <p class="contact-info-text">Tell us about your project and we'll respond within 24 hours with a tailored proposal. No fluff, no hard sell — just a straight conversation about how we can help your business grow.</p>
+      <div class="contact-details">
+        <a href="mailto:Sales@dtawizard.com" class="contact-detail">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></div>
+          Sales@dtawizard.com
+        </a>
+        <div class="contact-detail">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          Available globally · Remote-first
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group"><label>First name</label><input type="text" id="fname" placeholder="John"></div>
+        <div class="form-group"><label>Last name</label><input type="text" id="lname" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Business email</label><input type="email" id="email" placeholder="john@company.com"></div>
+      <div class="form-group"><label>Company / Organisation</label><input type="text" id="company" placeholder="Acme Corp"></div>
+      <div class="form-group">
+        <label>Service interested in</label>
+        <select id="service">
+          <option value="">Select a service...</option>
+          <option>Website Development</option>
+          <option>Digital Marketing</option>
+          <option>Lead Generation</option>
+          <option>Video Editing &amp; Production</option>
+          <option>Audio Editing &amp; Production</option>
+          <option>Multiple services / Full package</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Tell us about your project</label><textarea id="message" placeholder="What are you building? What's the challenge? What does success look like?"></textarea></div>
+      <button class="form-submit" onclick="submitForm()">
+        Send message
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="footer-logo">
+    <div class="logo-mark" style="width:28px;height:28px;"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8L6 11L13 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="8" r="6.5" stroke="white" stroke-width="1.2"/></svg></div>
+    DTA Wizard
+  </a>
+  <div class="footer-links">
+    <a href="#about">About</a><a href="#services">Services</a><a href="#leadgen">Lead Gen</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 DTA Wizard. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
