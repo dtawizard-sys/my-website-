@@ -188,3 +188,36 @@ function submitForm(){
 // ══════════════════════════════════════════════════
 const h1=document.querySelector('.hero h1');
 if(h1){ h1.style.opacity='0'; h1.style.transform='translateY(20px)'; setTimeout(()=>{ h1.style.transition='opacity 1s ease, transform 1s ease'; h1.style.opacity='1'; h1.style.transform='translateY(0)'; },200); }
+
+// ══════════════════════════════════════════════════
+// HERO VISUAL — COUNTER ANIMATION
+// ══════════════════════════════════════════════════
+(function() {
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const duration = 1600;
+    const start = performance.now();
+    function tick(now) {
+      const elapsed = Math.min((now - start) / duration, 1);
+      // Ease out cubic
+      const ease = 1 - Math.pow(1 - elapsed, 3);
+      el.textContent = Math.round(ease * target);
+      if (elapsed < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const counters = document.querySelectorAll('.hv-metric-val');
+  if (!counters.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        counters.forEach(c => animateCounter(c));
+        obs.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  obs.observe(document.querySelector('.hero-visual'));
+})();
