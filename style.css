@@ -475,3 +475,25 @@ footer { background: #040404; padding: 3rem; border-top: 1px solid #111; display
   .process-grid { grid-template-columns: 1fr; }
   .cursor-dot, .cursor-ring { display: none; }
 }
+
+/* ═══════════════════════════════════════
+   LOGO IMAGE OVERRIDES
+═══════════════════════════════════════ */
+.nav-logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+  /* The logo has a light bg — make it work on the white nav */
+  object-fit: contain;
+}
+nav.scrolled .nav-logo-img {
+  filter: none;
+}
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  /* Invert to white for dark footer */
+  filter: brightness(0) invert(1);
+}
