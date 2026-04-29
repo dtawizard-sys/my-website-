@@ -114,8 +114,24 @@ body { font-family: var(--sans); background: var(--white); color: var(--black); 
 ═══════════════════════════════════════ */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: var(--nav-h); display: flex; align-items: center; justify-content: space-between; padding: 0 3rem; background: rgba(250,250,248,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--gray-100); transition: box-shadow 0.3s; }
 nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.07); }
-.nav-logo { font-size: 18px; font-weight: 500; text-decoration: none; color: var(--black); display: flex; align-items: center; gap: 10px; }
-.logo-mark { width: 32px; height: 32px; background: var(--black); border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.nav-logo { font-size: 18px; font-weight: 500; text-decoration: none; color: var(--black); display: flex; align-items: center; gap: 0; }
+
+/* Nav logo: show full logo image, tightly sized */
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  /* The logo PNG has transparent bg now — renders perfectly on light nav */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.nav-logo:hover .nav-logo-img {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+/* Logo mark kept for legacy selectors but hidden since we use img */
+.logo-mark { display: none; }
 .logo-mark::after { content:''; position:absolute; inset:0; background: linear-gradient(135deg, var(--accent), var(--accent2)); opacity: 0; transition: opacity 0.3s; }
 .logo-mark:hover::after { opacity: 1; }
 .logo-mark svg { position: relative; z-index: 1; }
@@ -439,7 +455,15 @@ h2.display em { font-style: italic; background: linear-gradient(135deg, var(--ac
    FOOTER
 ═══════════════════════════════════════ */
 footer { background: #040404; padding: 3rem; border-top: 1px solid #111; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; position: relative; z-index: 1; }
-.footer-logo { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 500; color: var(--white); text-decoration: none; }
+.footer-logo { display: flex; align-items: center; gap: 0; font-size: 16px; font-weight: 500; color: var(--white); text-decoration: none; transition: opacity 0.2s; }
+.footer-logo:hover { opacity: 0.8; }
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  /* White version of logo for dark footer */
+}
 .footer-links { display: flex; gap: 2rem; }
 .footer-links a { font-size: 13px; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--white); }
@@ -474,26 +498,4 @@ footer { background: #040404; padding: 3rem; border-top: 1px solid #111; display
 @media (max-width: 540px) {
   .process-grid { grid-template-columns: 1fr; }
   .cursor-dot, .cursor-ring { display: none; }
-}
-
-/* ═══════════════════════════════════════
-   LOGO IMAGE OVERRIDES
-═══════════════════════════════════════ */
-.nav-logo-img {
-  height: 38px;
-  width: auto;
-  display: block;
-  /* The logo has a light bg — make it work on the white nav */
-  object-fit: contain;
-}
-nav.scrolled .nav-logo-img {
-  filter: none;
-}
-.footer-logo-img {
-  height: 44px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-  /* Invert to white for dark footer */
-  filter: brightness(0) invert(1);
 }
